@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background: url('background.jpg') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 100%;
+  border: 1.2rem solid #eee;
+  position: relative;
+
+  transform: rotate(90deg);
+}
+
+.clock::after {
+  content: '';
+  display: block;
+
+  background-color: #ccc;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock__hand {
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 1rem);
+  clip-path: ellipse();
+
+  transform: translateY(-50%);
+  transform-origin: calc(100% - 1rem) 50%;
+  transition: transform 0.2s cubic-bezier(0.4, 2.64, 0.29, 0.13);
+}
+
+.clock__hand--hour {
+  width: 9rem;
+  height: 1rem;
+}
+
+.clock__hand--minute {
+  width: 11rem;
+  height: 0.7rem;
+}
+
+.clock__hand--second {
+  width: 13rem;
+  height: 0.5rem;
+}

@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color: #40e0d0;
+  --blur: 0px;
+  --spacing: 0px;
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+
+  height: 100vh;
+  background: linear-gradient(to right top, #444, #333, #444) no-repeat;
+}
+
+.heading {
+  text-align: center;
+  color: #1fed59;
+  padding: 2rem;
+}
+
+main {
+  width: 80rem;
+  margin: 0 auto;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.interface {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.interface span {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #eee;
+}
+
+.output {
+  background-color: var(--color);
+  height: 45rem;
+  position: relative;
+}
+
+.output__photo {
+  display: block;
+  width: 100%;
+  height: 45rem;
+  object-fit: cover;
+
+  position: absolute;
+  left: var(--spacing);
+  top: var(--spacing);
+  filter: blur(var(--blur));
+}
