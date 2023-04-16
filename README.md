@@ -1,3 +1,3 @@
 # DOM-practice
 
-It comprise of HTML, CSS and JavaScript DOM practice projects. 
+It comprises of HTML, CSS and JavaScript DOM practice projects. 
